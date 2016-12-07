@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+
+<p> Notes taken from the Py app, HTML/CSS course and put into my own words where possible. </p>
+
+<br>
+<br>
+
+<p> HTML  stands for Hyper Text Markup Language. It has only one purpose: to describle how web pages look. Or more specifically, the structure of the page and what content is displayed. </p>
+
+
+<br>
+<br>
+
+
+<h1> TAGS </h1>
+
+<p> All tags must be opened and closed. Below is a < h1 > heading tag. (There is a space before the 'h' and after the '1' so the browser doesn't read it as the h1 tag). </p>
+
+<h1> h1 Tag </h1>
+
+
+<br>
+<br>
+
+
+<h1> HEADINGS </h1>
+<!-- <h1> tag all the way to <h6>. 1 being the biggest, such as the Main Headline. 6 being the smallest for sub-headings. -->
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+
+
+<br>
+<br>
+
+
+<h1> TEXT </h1>
+<!-- Displaying text on a page mainly requires the <p> Paragraph tag. -->
+
+<p>text here</p>
+
+
+<br>
+<br>
+
+
+<h1> BREAK TAG / NEXT LINE </h1>
+
+<!-- A <b> Break tag works the same as hitting 'Enter' on a keyboard. It goes to a new line. It DOES NOT need a closing tag. -->
+
+<p>I want a <br> new line</p>
+<!--
+	I want a
+	new line
+-->
+
+
+<br>
+<br>
+
+
+<h1> ATTRIBUTES </h1>
+
+<!-- Attributes give more information about a particular element. They let you do things like give titles to paragraphs, make links, and say how big an image should be. Thay are also important for making websites more accesible to people with disabilities. Attributes go in the opening tag of the element like so: -->
+
+<p title="Attributes">
+	This is a paragraph that has a title
+</p>
+
+
+<br>
+<br>
+
+
+<h1> LINKS </h1>
+
+<!-- Combining tags and attributes lets you put links on your web page. To make a link, you use the <a> tag and the 'href' attribute: -->
+
+<a href="http://py-app.com">
+	Check out our website
+</a>
+
+
+<br>
+<br>
+
+
+<h1> ID's </h1>
+
+<!-- We can give each HTML element a unique ID attribute to reference it in other places. ID's don't actually appear on the page anywhere, they are just used for other code in interact with and understand the page. There should be only one element with each ID on a page, so be sure not to reuse ID's. -->
+
+<p id="first">
+	This paragraph has an id of "first", meaning it is the first paragraph. We can target it easily in our CSS.
+<!--
+In out external style-sheet it would read...
+
+#first {
+	color: blue;
+}
+
+To target ALL paragraphs it would be...
+
+p {
+	colour: red;
+}
+-->
+</p>
+
+
+<br>
+<br>
+
+
+<h1> INTERNAL LINKS </h1>
+
+<!-- We can use ID's to make links to other sections of our page by replacing the URL with an ID. One common use is to add a table of contents to a longer web page. -->
+
+<a href="#first">
+	Check out our main paragraph!
+</a>
+
+
+<br>
+<br>
+
+
+<h1> CLASSES </h1>
+
+<!-- Classes are another attribute. They're like ID's, in that they let us identify specific HTML elements, but unlike ID's, there can be multiple elements with the same class in the same page. We'll use these more when we start using CSS to style our page. If you want an element to have multiple classes, you can seperate them with a space. -->
+
+<p class="body-paragraph main">
+	This element has two classes: 'body-paragraph' and 'main'.
+</p>
+
+
+<br>
+<br>
+
+
+<h1> IMAGES </h1>
+
+<!-- Like the <br> break tag, the image tag DOES NOT need a closing tag. We will use the 'src' attribute to say where the picture is located (in relation to this HTML file. Is it in another directory? Or the same directory?) We can use the alt attribute to give text to use if the image can't be shown for some reason. The alt text is also useful for blind users to understand what the picture is, since their screen reader software can read the text to them. -->
+
+<img src="my_picture.jpg" alt="A picture of me" width="230" height="200">
+<br>
+<br>
+<img src="another_picture.jpg" alt="Another picture of me">
+
+<p>(There isn't a second picture so we can see what appears when the picture is unavailible)</p>
+
+
+<br>
+<br>
+
+
+<h1> TABLES </h1>
+
+<!-- Tables are a great way to organise a lot of data on your page, and with HTML, they're easy to set up. We use the table tag to create a table, and in that table, we have a row tag to make rows. In the rows, we put the data. We can also use headings with the <th> tag. -->
+
+<table>
+	<tr>
+		<th> Column 1 </th>
+		<th> Column 2 </th>
+	</tr>
+	<tr>
+		<th> Data 1 </th>
+		<th> Data 2 </th>
+	</tr>
+</table>
+
+
+<br>
+<br>
+
+
+<h1> LISTS </h1>
+
+Lists are another way to organise information. There are two types of lists in HTML: Ordered and Unordered. Unordered lists appear as bullry points, while ordered lists are numbered. We use the <ul> and <ol> tags to set up the lists, and then the <li> tag to put the items in the list.
+
+<ul>
+	<li> This item is an Unordered list</li>
+	<li>Second item</li>
+</ul>
+
+<br>
+<br>
+
+<ol>
+	<li> This item is an Ordered list</li>
+	<li>Second item</li>
+</ol>
+
+
+<br>
+<br>
+
+
+<h1> COMMENTS </h1>
+
+If you want to put text in your HTML that doesn't show up on the page and ins't interpreted as code, you can use a comment. Comment's can help you keep track of what wach section does or even just as a note to yourself when writing the page. Notice how when you run this code, you dont see anything. That's because HTML doesn't interpret anything inside the comment.
+
+<!-- Comment text goes here. -->
+
+<p>(As the message itself is a comment, you wont see it).</p>
+
+
+<br>
+<br>
+
+
+<h1> THE HTML TAG </h1>
+
+So far we have talked about how to set up the content of your page, but before we can set up the page for other people to see, we have to structure it properly. The first step to this is putting an HTML tag and document type, so the browser knows the page is HTML.
+
+<!--
+	<!DOCTYPE html>
+	<html>
+		(The rest of the page goes here..)
+	</html>
+-->
+
+<p>(We have already done this within this document).</p>
+
+<br>
+<br>
+
+<h1> Head and Body</h1>
+
+<!-- HTML pages have two main parts: the Head and the Body. The head contains all the setup information about the page. Nothing in the head actually shows on screen. The body, on the other hand, is what contains all the content of your page to be displayed. -->
+
+<!--
+
+	<!DOCTYPE html>
+	<html>
+	<head>
+		(The Head goes here...)
+	</head>
+	<body>
+		(The body goes here...)
+	</body>
+	</html>
+
+-->
+
+
+<br>
+<br>
+
+
+<h1> THE TITLE </h1>
+
+We can give our page a title by putting a title element in the head. Browsers show the title on the tab of the web page and in bookmarks.
+
+<head>
+	<title> My Title </title>
+</head>
+
+
+<br>
+<br>
+
+
+<h1> OUR FIRST WEBPAGE </h1>
+
+We can put all thses tags and attributes together to make our own webpage!
+
+<h2> Py App </h2>
+<h3>HTML</h3>
+
+<p>You can learn HTML from out app!</p>
+
+
+<br>
+<br>
+
+
+<h1> HTML FORMS </h1>
+
+What are forms for?
+Forms are used for mant different purposes. In general though, you use forms when you want to accept inout from the user. This could be anything from a search query, to a Username and Password. HTML forms are a powerful tool for adding more functionality to your website.
+
+
+</html>
